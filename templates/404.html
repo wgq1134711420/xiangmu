@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>老板出门梦游了稍等片刻</h1>
+<script>
+                                    var l;
+                                    function fn1() {
+                                        l=window.setInterval(fn,1000);
+                                    }
+                                    fn1();
+
+
+                                        var a=6;
+                                        function fn() {
+
+                                            a--;
+                                            var s = document.getElementById('asd');
+                                            s.innerHTML = a+'秒以后跳转到登陆页面';
+                                            if (a===0){
+                                                window.clearInterval(l);
+                                                window.location.href='{% url 'loginapp:denlu' %}'
+                                            }
+                                        }
+</script>
+</body>
+</html>
